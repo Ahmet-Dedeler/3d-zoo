@@ -37,7 +37,7 @@
     <a-sphere position="5.5 3.2 -6.5" radius="0.4" color="#FFF"></a-sphere>
     <a-sphere position="4.5 3.3 -6.5" radius="0.3" color="#FFF"></a-sphere>
 
-    <!-- New Objects -->
+    <!-- Improved and New Objects -->
     <a-box position="6 0 -8" width="1" height="1" depth="1" color="#8B4513"></a-box>
     <a-cylinder position="6 1 -8" radius="0.5" height="2" color="#FFD700"></a-cylinder>
     <a-plane position="6 2.5 -8" rotation="90 0 0" width="0.5" height="0.5" color="#8B4513"></a-plane>
@@ -47,7 +47,73 @@
     <a-entity geometry="primitive: box; width: 2.2; height: 0.1; depth: 0.1;" position="9 0.8 -10" material="color: brown"></a-entity>
     <a-entity geometry="primitive: cylinder; radius: 0.1; height: 2;" position="2 -0.5 -12" material="color: blue"></a-entity>
     <a-entity geometry="primitive: box; width: 0.2; height: 0.5; depth: 0.2;" position="5 0.25 -20" material="color: orange"></a-entity>
-    <a-box position="4 0.5 -12" width="0.2" height="1" depth="0.2" color="#FF4500"></a-box>
+    <a-box position="4 0.5 -10" width="0.2" height="1" depth="0.2" color="#FF4500"></a-box>
+    <a-box position="4 0.5 -6" width="1" height="0.2" depth="3" color="#964B00" rotation="90 0 0"></a-box>
+    <a-box position="8 0.5 -8" width="0.7" height="2" depth="0.4" color="#D2691E"></a-box>
+    <a-box position="8 2.5 -8" width="0.6" height="0.1" depth="0.3" color="#964B00"></a-box>
+    <a-cylinder position="0 0.3 -5" radius="0.3" height="0.5" color="#A52A2A"></a-cylinder>
+
+    <!-- Lighting and Camera -->
+    <a-light type="ambient" color="#FFFFFF"></a-light>
+    <a-light type="directional" position="1 1 -2" intensity="0.5"></a-light>
+    <a-entity camera look-controls wasd-controls position="2 1.6 4" rotation="0 -30 0"></a-entity>
+  </a-scene>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ahmet's Second House</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- House Structure -->
+    <a-box position="2 0 -6" width="4" height="0.1" depth="4" color="#8B4513"></a-box>
+    <a-box position="2 1.5 -6" width="4" height="3" depth="4" color="#D2691E"></a-box>
+    <a-box position="2 3 -6" width="4" height="0.1" depth="4" color="#8B4513"></a-box>
+    <a-cone position="2 4.5 -6" radius-bottom="2.5" height="2" color="#A52A2A"></a-cone>
+    <a-box position="2 1 -7.95" width="1.5" height="2" depth="0.1" color="#FFF8DC"></a-box>
+    <a-box position="2.75 2 -7.96" width="0.3" height="0.3" depth="0.02" color="#8B4513"></a-box>
+    <a-box position="1.25 2 -7.96" width="0.3" height="0.3" depth="0.02" color="#8B4513"></a-box>
+    <a-box position="4 2 -6.05" width="0.1" height="1" depth="2" color="#8B4513"></a-box>
+    <a-box position="0 2 -6.05" width="0.1" height="1" depth="2" color="#8B4513"></a-box>
+    <a-box position="2 1 -4.05" width="4" height="0.1" depth="4.1" color="#8B4513"></a-box>
+    <a-box position="2 2 -6.05" width="4" height="3" depth="0.1" color="#D2691E"></a-box>
+    <a-box position="0.5 1.3 -3.8" width="0.6" height="0.8" depth="0.1" color="#B0C4DE"></a-box>
+    <a-box position="3.5 1.3 -3.8" width="0.6" height="0.8" depth="0.1" color="#B0C4DE"></a-box>
+    <a-sphere position="4 4.5 -6.05" radius="0.3" color="#FFD700"></a-sphere>
+    <a-box position="1 0.5 -6" width="1" height="1" depth="1" color="#DAA520"></a-box>
+    <a-cylinder position="5 1 -6" radius="0.2" height="1" color="#228B22"></a-cylinder>
+    <a-sphere position="5 1.8 -6" radius="0.5" color="#228B22"></a-sphere>
+    <a-box position="2 0.5 -10" width="1" height="1" depth="1" color="#D3D3D3"></a-box>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="20" color="#7BC8A4"></a-plane>
+
+    <!-- Sky Elements (Clouds) -->
+    <a-sphere position="-3 3 -4" radius="0.5" color="#FFF"></a-sphere>
+    <a-sphere position="-2.5 3.2 -4.5" radius="0.4" color="#FFF"></a-sphere>
+    <a-sphere position="-2.8 3.3 -4.5" radius="0.3" color="#FFF"></a-sphere>
+    <a-sphere position="5 3 -6" radius="0.5" color="#FFF"></a-sphere>
+    <a-sphere position="5.5 3.2 -6.5" radius="0.4" color="#FFF"></a-sphere>
+    <a-sphere position="4.5 3.3 -6.5" radius="0.3" color="#FFF"></a-sphere>
+
+    <!-- Improved and New Objects -->
+    <a-box position="6 0 -8" width="1" height="1" depth="1" color="#8B4513"></a-box>
+    <a-cylinder position="6 1 -8" radius="0.5" height="2" color="#FFD700"></a-cylinder>
+    <a-plane position="6 2.5 -8" rotation="90 0 0" width="0.5" height="0.5" color="#8B4513"></a-plane>
+    <a-box position="1 0 -8" width="1.5" height="1" depth="1.5" color="#00008B"></a-box>
+    <a-entity geometry="primitive: box; width: 0.1; height: 1.5; depth: 0.1;" position="8 0 -10" material="color: gray"></a-entity>
+    <a-entity geometry="primitive: box; width: 0.1; height: 1.5; depth: 0.1;" position="10 0 -10" material="color: gray"></a-entity>
+    <a-entity geometry="primitive: box; width: 2.2; height: 0.1; depth: 0.1;" position="9 0.8 -10" material="color: brown"></a-entity>
+    <a-entity geometry="primitive: cylinder; radius: 0.1; height: 2;" position="2 -0.5 -12" material="color: blue"></a-entity>
+    <a-entity geometry="primitive: box; width: 0.2; height: 0.5; depth: 0.2;" position="5 0.25 -20" material="color: orange"></a-entity>
+    <a-box position="4 0.5 -10" width="0.2" height="1" depth="0.2" color="#FF4500"></a-box>
+    <a-box position="4 0.5 -6" width="1" height="0.2" depth="3" color="#964B00" rotation="90 0 0"></a-box>
+    <a-box position="8 0.5 -8" width="0.7" height="2" depth="0.4" color="#D2691E"></a-box>
+    <a-box position="8 2.5 -8" width="0.6" height="0.1" depth="0.3" color="#964B00"></a-box>
+    <a-cylinder position="0 0.3 -5" radius="0.3" height="0.5" color="#A52A2A"></a-cylinder>
 
     <!-- Lighting and Camera -->
     <a-light type="ambient" color="#FFFFFF"></a-light>
