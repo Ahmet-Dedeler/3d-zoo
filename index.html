@@ -28,27 +28,34 @@
     <a-sphere position="3 1.8 -5" radius="0.5" color="#228B22"></a-sphere>
     <a-box position="0 0.5 -9" width="1" height="1" depth="1" color="#D3D3D3"></a-box>
     <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="20" color="#7BC8A4"></a-plane>
-    
-    <a-box position="1 0.1 -4.5" width="0.5" height="0.5" depth="0.5" color="#FF6347"></a-box>
-    <a-box position="2.5 0.3 -6" width="0.5" height="0.5" depth="0.5" color="#7FFFD4"></a-box>
-    <a-box position="1.5 0.3 -2" width="0.5" height="0.5" depth="0.5" color="#FF6347"></a-box>
-    <a-box position="10 0 -16" width="4" height="6" depth="0.1" color="#FFF"></a-box>
-    <a-box position="2 0 -8" width="1" height="1.2" depth="0.1" color="#A3EBB1"></a-box>
+
+    <!-- New Elements -->
+    <a-box position="0 0.5 -4" width="0.3" height="0.3" depth="0.3" color="#FF4500"></a-box>
+    <a-box position="-1 0.5 -4" width="0.3" height="0.3" depth="0.3" color="#FF4500"></a-box>
+    <a-box position="-0.5 0.5 -4" width="0.3" height="0.3" depth="0.3" color="#FF4500"></a-box>
+    <a-cylinder position="4 0 -7" radius="0.5" height="1" color="#8B4513"></a-cylinder>
+    <a-cone position="4 1 -7" radius-bottom="1" height="1" color="#A52A2A"></a-cone>
+    <a-box position="-4 0.5 -6" width="1" height="1" depth="1" color="#FF6347"></a-box>
+    <a-cylinder position="0 1 -8" radius="0.5" height="2" color="#FFD700"></a-cylinder>
+    <a-box position="0 1.5 -8.05" width="1" height="0.1" depth="0.1" color="#8B4513"></a-box>
+    <a-box position="1 0.5 -9" width="0.3" height="0.3" depth="0.3" color="#7FFFD4"></a-box>
+    <a-box position="1.5 0.5 -6" width="0.5" height="0.5" depth="0.5" color="#FF6347"></a-box>
+    <a-cylinder position="-5 0 -10" radius="0.1" height="3" color="#696969"></a-cylinder>
+    <a-cylinder position="-5 3 -10" radius="0.5" height="0.5" color="#FFD700"></a-cylinder>
+
+    <!-- Sky Elements (Clouds) -->
     <a-sphere position="-2 3 -4" radius="0.5" color="#FFF"></a-sphere>
     <a-sphere position="-1.5 3.2 -4.5" radius="0.4" color="#FFF"></a-sphere>
     <a-sphere position="-2.5 3.3 -4.5" radius="0.3" color="#FFF"></a-sphere>
     <a-sphere position="2 3 -6" radius="0.5" color="#FFF"></a-sphere>
     <a-sphere position="2.5 3.2 -6.5" radius="0.4" color="#FFF"></a-sphere>
     <a-sphere position="1.5 3.3 -6.5" radius="0.3" color="#FFF"></a-sphere>
+    <a-box position="0 2.5 -10" width="6" height="0.5" depth="3" color="#DDDDDD" rotation="90 0 0"></a-box>
+    
+    <!-- Lighting and Camera -->
     <a-light type="ambient" color="#FFFFFF"></a-light>
     <a-light type="directional" position="1 1 -2" intensity="0.5"></a-light>
-    <a-entity camera look-controls wasd-controls position="0 1.6 4"></a-entity>
-    
-    <a-cylinder position="-3 0.6 -3" radius="0.1" height="2" color="#FFD700"></a-cylinder>
-    <a-entity geometry="primitive: box; width: 0.1; height: 1.5; depth: 0.1;" position="1 0 -18" material="color: gray"></a-entity>
-    <a-entity geometry="primitive: box; width: 1.7; height: 0.1; depth: 0.1;" position="10 0 -24.5" material="color: blue"></a-entity>
-    <a-sphere radius="2" position="3.4 2 -5"></a-sphere>
-    <a-ring color="red" radius-inner="3.5" radius-outer="4" position="3.43 21 -15.34" rotation="90 30"></a-ring>
+    <a-entity camera look-controls wasd-controls position="0 1.6 2"></a-entity>
   </a-scene>
 </body>
 </html>
