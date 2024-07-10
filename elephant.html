@@ -17,11 +17,11 @@
     <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#8B4513" roughness="1" metalness="0"></a-plane>
 
     <!-- Sign -->
-    <a-box position="0 1.5 2" width="2" height="0.75" depth="0.1" color="#FFF8DC"></a-box>
-    <a-text value="Elephant" align="center" color="#000000" width="4" position="0 1.7 2.05"></a-text>
+    <a-box position="-2 1.5 1" width="2" height="0.75" depth="0.1" color="#FFF8DC"></a-box>
+    <a-text value="Elephant" align="center" color="#000000" width="4" position="-2 1.7 1.05"></a-text>
 
     <!-- Elephant Model -->
-    <a-entity>
+    <a-entity rotation="0 180 0">
       <!-- Body -->
       <a-box position="0 1.5 -5" width="3" height="1.5" depth="6" color="#808080"></a-box>
       <!-- Head -->
@@ -35,33 +35,33 @@
       <a-box position="1 0.75 -7" width="0.5" height="1.5" depth="0.5" color="#808080"></a-box>
       <a-box position="-1 0.75 -7" width="0.5" height="1.5" depth="0.5" color="#808080"></a-box>
       <!-- Trunk -->
-      <a-cylinder position="0 1.5 -9" rotation="90 0 0" radius="0.3" height="1.5" color="#808080"></a-cylinder>
+      <a-cylinder position="0 1.5 -9.5" rotation="90 0 0" radius="0.3" height="1.5" color="#808080"></a-cylinder>
       <!-- Tail -->
-      <a-cylinder position="0 1.5 -1.9" rotation="0 0 0" radius="0.1" height="1" color="#808080"></a-cylinder>
+      <a-cylinder position="0 1.5 -2.5" rotation="0 0 0" radius="0.1" height="1" color="#808080"></a-cylinder>
     </a-entity>
 
     <!-- Flora and Environmental Details -->
     <!-- Acacia Tree -->
     <a-entity>
-      <a-cylinder position="2 0.5 -10" radius="0.2" height="4" color="#8B4513"></a-cylinder>
-      <a-sphere position="2 4.5 -10" radius="2" color="#228B22"></a-sphere>
-      <a-cone position="2 6 -10" radius-bottom="1.5" height="2" color="#228B22"></a-cone>
+      <a-cylinder position="2 2 -10" radius="0.2" height="4" color="#8B4513"></a-cylinder>
+      <a-sphere position="2 4 -10" radius="2" color="#228B22"></a-sphere>
+      <a-cone position="2 5 -10" radius-bottom="1.5" height="2" color="#228B22"></a-cone>
     </a-entity>
 
     <!-- More Acacia Trees -->
     <a-entity>
-      <a-cylinder position="-6 0.5 -14" radius="0.2" height="5" color="#8B4513"></a-cylinder>
-      <a-sphere position="-6 6 -14" radius="2.5" color="#228B22"></a-sphere>
-      <a-cone position="-6 7.5 -14" radius-bottom="2" height="2" color="#228B22"></a-cone>
+      <a-cylinder position="-6 2 -14" radius="0.2" height="5" color="#8B4513"></a-cylinder>
+      <a-sphere position="-6 5.5 -14" radius="2.5" color="#228B22"></a-sphere>
+      <a-cone position="-6 7 -14" radius-bottom="2" height="2" color="#228B22"></a-cone>
     </a-entity>
 
     <!-- Bushes -->
-    <a-sphere position="3 0.5 -6" radius="0.5" color="#228B22"></a-sphere>
-    <a-sphere position="-3 0.5 -6" radius="0.5" color="#228B22"></a-sphere>
+    <a-sphere position="3 0.25 -6" radius="0.5" color="#228B22"></a-sphere>
+    <a-sphere position="-3 0.25 -6" radius="0.5" color="#228B22"></a-sphere>
 
     <!-- Rocks -->
     <a-box position="-2 0.25 -4" width="1" height="0.5" depth="1" color="#A9A9A9"></a-box>
-    <a-box position="4 0.25 -10" width="1" height="0.7" depth="0.5" color="#A9A9A9"></a-box>
+    <a-box position="4 0.35 -10" width="1" height="0.7" depth="0.5" color="#A9A9A9"></a-box>
 
     <!-- Small Waterhole -->
     <a-circle position="0 0 -12" rotation="-90 0 0" radius="2" color="#1E90FF"></a-circle>
@@ -69,8 +69,8 @@
     <!-- Additional Environment Details -->
     <a-box position="2 0.25 -12" width="1" height="0.5" depth="1" color="#A9A9A9"></a-box>
     <a-box position="-8 0.25 -10" width="1" height="0.5" depth="1" color="#A9A9A9"></a-box>
-    <a-box position="6 0.5 -9" width="0.3" height="1" depth="0.3" color="#8B4513"></a-box>
-    <a-sphere position="6 1.5 -9" radius="1" color="#3CB371"></a-sphere>
+    <a-box position="6 0.25 -9" width="0.3" height="1" depth="0.3" color="#8B4513"></a-box>
+    <a-sphere position="6 1.25 -9" radius="1" color="#3CB371"></a-sphere>
 
     <!-- Camera -->
     <a-entity camera look-controls wasd-controls position="0 2 10"></a-entity>
