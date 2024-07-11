@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Zebra Enclosure</title>
+  <title>Rhino Enclosure</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
@@ -12,28 +12,34 @@
     <a-light type="ambient" color="#555555"></a-light>
     <a-light type="directional" position="10 10 5" intensity="0.8" color="#FFFFFF"></a-light>
     <a-light type="point" intensity="0.5" distance="40" position="-5 5 15" color="#FFD700"></a-light>
-    
+
     <!-- Ground -->
     <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#C2B280" roughness="1" metalness="0"></a-plane>
 
     <!-- Sign -->
     <a-box position="-2 1.5 1" width="2" height="0.75" depth="0.1" color="#FFF8DC"></a-box>
-    <a-text value="Zebra" align="center" color="#000000" width="4" position="-2 1.7 1.05"></a-text>
+    <a-text value="Rhino" align="center" color="#000000" width="4" position="-2 1.7 1.05"></a-text>
 
-    <!-- Zebra Model -->
+    <!-- Rhino Model -->
     <a-entity rotation="0 180 0">
       <!-- Body -->
-      <a-box position="0 1.5 -5" width="1.75" height="1" depth="3.5" material="src: #zebraStripes"></a-box>
+      <a-box position="0 1.5 -5" width="2" height="1.5" depth="4" color="#808080"></a-box>
       <!-- Head -->
-      <a-box position="0 2.5 -6.5" width="1" height="1" depth="1.5" material="src: #zebraStripes"></a-box>
+      <a-box position="0 2.5 -7" width="1.5" height="1" depth="1.5" color="#808080"></a-box>
+      <!-- Ears -->
+      <a-box position="0.75 2.75 -7" width="0.2" height="0.5" depth="0.2" color="#808080"></a-box>
+      <a-box position="-0.75 2.75 -7" width="0.2" height="0.5" depth="0.2" color="#808080"></a-box>
+      <!-- Horns -->
+      <a-cone position="0 2.75 -7.75" height="0.5" radius-bottom="0.2" color="#D3D3D3"></a-cone>
+      <a-cone position="0 2.5 -7.5" height="0.3" radius-bottom="0.1" color="#D3D3D3"></a-cone>
       <!-- Legs -->
-      <a-box position="0.75 0.75 -4" width="0.3" height="1.5" depth="0.3" material="src: #zebraStripes"></a-box>
-      <a-box position="-0.75 0.75 -4" width="0.3" height="1.5" depth="0.3" material="src: #zebraStripes"></a-box>
-      <a-box position="0.75 0.75 -6" width="0.3" height="1.5" depth="0.3" material="src: #zebraStripes"></a-box>
-      <a-box position="-0.75 0.75 -6" width="0.3" height="1.5" depth="0.3" material="src: #zebraStripes"></a-box>
+      <a-box position="0.75 0.75 -3" width="0.4" height="1.5" depth="0.4" color="#808080"></a-box>
+      <a-box position="-0.75 0.75 -3" width="0.4" height="1.5" depth="0.4" color="#808080"></a-box>
+      <a-box position="0.75 0.75 -6" width="0.4" height="1.5" depth="0.4" color="#808080"></a-box>
+      <a-box position="-0.75 0.75 -6" width="0.4" height="1.5" depth="0.4" color="#808080"></a-box>
       <!-- Tail -->
-      <a-cylinder position="0 1.75 -3" rotation="90 0 0" radius="0.1" height="1.5" color="#000000"></a-cylinder>
-      <a-sphere position="0 1.75 -3.75" radius="0.2" color="#000000"></a-sphere>
+      <a-cylinder position="0 1.5 -2.2" rotation="0 0 0" radius="0.1" height="1" color="#808080"></a-cylinder>
+      <a-sphere position="0 1 -2.2" radius="0.15" color="#808080"></a-sphere>
     </a-entity>
 
     <!-- Flora and Environmental Details -->
@@ -67,7 +73,7 @@
     <a-box position="-8 0.25 -10" width="1" height="0.5" depth="1" color="#A9A9A9"></a-box>
     <a-box position="6 0.25 -9" width="0.3" height="1" depth="0.3" color="#8B4513"></a-box>
     <a-sphere position="6 1.25 -9" radius="1" color="#3CB371"></a-sphere>
-    
+
     <!-- New Unique Additions -->
     <!-- Tall Grass Patches -->
     <a-entity>
@@ -84,12 +90,12 @@
 
     <!-- Small Hill -->
     <a-cone position="-5 0 -5" radius-bottom="2.5" height="1.5" color="#8B4513"></a-cone>
-    
+
     <!-- Stack of Logs -->
     <a-entity>
       <a-cylinder position="5 0 -5" rotation="90 0 0" radius="0.2" height="2" color="#8B4513"></a-cylinder>
       <a-cylinder position="4.8 0 -5.5" rotation="90 0 0" radius="0.2" height="2" color="#8B4513"></a-cylinder>
-      <a-cylinder position="5.2 0 -5.5" rotation="90 0 0" radius="0.2" height="2" color="#8B4513"></a-entity>
+      <a-cylinder position="5.2 0 -5.5" rotation="90 0 0" radius="0.2" height="2" color="#8B4513"></a-cylinder>
     </a-entity>
 
     <!-- Stone Cairn -->
@@ -99,7 +105,7 @@
 
     <!-- Termite Mound -->
     <a-cone position="-4 0 -9" radius-bottom="0.75" height="2" color="#8B4513"></a-cone>
-    
+
     <!-- Large Bush -->
     <a-sphere position="-3 0.6 -8" radius="1" color="#228B22"></a-sphere>
 
@@ -111,23 +117,22 @@
       <a-sphere position="5.7 1.7 -11" radius="0.6" color="#228B22"></a-sphere>
     </a-entity>
 
-    <!-- Additional Trees and Plants -->
+    <!-- Palm Tree -->
     <a-entity>
-      <a-cylinder position="8 0.7 -11" radius="0.15" height="1.2" color="#8B4513"></a-cylinder>
-      <a-sphere position="8 2 -11" radius="0.6" color="#228B22"></a-sphere>
-      <a-sphere position="8.3 2 -11" radius="0.6" color="#228B22"></a-sphere>
-      <a-sphere position="7.7 2 -11" radius="0.6" color="#228B22"></a-sphere>
-      <a-box position="7.7 0.7 -11" width="1" height="0.2" depth="0.5" color="#556B2F"></a-box>
-      <a-cone position="4 -0.01 -9" rotation="0 15 0" radius-bottom="0.2" height="1.5" color="#556B2F"></a-cone>
+      <a-cylinder position="-8 0.7 -12" radius="0.15" height="2" color="#8B4513"></a-cylinder>
+      <a-cone position="-8 2.7 -12" radius-bottom="2" height="1" color="#228B22" rotation="-90 0 0"></a-cone>
     </a-entity>
+
+    <!-- Fallen Log -->
+    <a-cylinder position="5 0 -7" rotation="90 0 0" radius="0.25" height="2" color="#8B4513"></a-cylinder>
+
+    <!-- Additional Bushes and Trees -->
+    <a-sphere position="-4 0.5 -7" radius="0.4" color="#228B22"></a-sphere>
+    <a-cylinder position="2 0.7 -13" radius="0.2" height="1" color="#8B4513"></a-cylinder>
+    <a-cone position="2 1.7 -13" radius-bottom="0.6" height="1" color="#228B22"></a-cone>
 
     <!-- Camera -->
     <a-entity camera look-controls wasd-controls position="0 2 10"></a-entity>
   </a-scene>
-
-  <!-- Zebra Stripes Texture -->
-  <a-assets>
-    <img id="zebraStripes" src="https://i.imgur.com/6HTFvWz.png">
-  </a-assets>
 </body>
 </html>
