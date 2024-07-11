@@ -12,7 +12,7 @@
     <a-light type="ambient" color="#555555"></a-light>
     <a-light type="directional" position="10 10 5" intensity="0.8" color="#FFFFFF"></a-light>
     <a-light type="point" intensity="0.5" distance="40" position="-5 5 15" color="#FFD700"></a-light>
-
+    
     <!-- Ground -->
     <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#C2B280" roughness="1" metalness="0"></a-plane>
 
@@ -23,21 +23,29 @@
     <!-- Lion Model -->
     <a-entity rotation="0 180 0">
       <!-- Body -->
-      <a-box position="0 1.5 -5" width="2" height="1" depth="3" color="#DAA520"></a-box>
+      <a-box position="0 2 -5" width="2" height="1" depth="4" color="#DAA520"></a-box>
       <!-- Head -->
-      <a-sphere position="0 2.25 -7" radius="0.75" color="#DAA520"></a-sphere>
+      <a-sphere position="0 3.5 -7.5" radius="0.75" color="#DAA520"></a-sphere>
       <!-- Mane -->
-      <a-sphere position="-0.75 2.25 -7" radius="0.5" color="#A0522D"></a-sphere>
-      <a-sphere position="0.75 2.25 -7" radius="0.5" color="#A0522D"></a-sphere>
-      <a-sphere position="0 3 -7" radius="0.5" color="#A0522D"></a-sphere>
+      <a-sphere position="-1.25 3.5 -7.5" radius="0.6" color="#A0522D"></a-sphere>
+      <a-sphere position="1.25 3.5 -7.5" radius="0.6" color="#A0522D"></a-sphere>
+      <a-entity rotation="0 45 0">
+        <a-sphere position="0 3.5 -7.5" radius="0.6" color="#A0522D"></a-sphere>
+        <a-sphere position="0 3.5 -7.5" radius="0.6" color="#A0522D"></a-sphere>
+      </a-entity>
+      <!-- Eyes -->
+      <a-sphere position="-0.3 3.7 -8" radius="0.1" color="#000000"></a-sphere>
+      <a-sphere position="0.3 3.7 -8" radius="0.1" color="#000000"></a-sphere>
+      <!-- Nose -->
+      <a-sphere position="0 3.4 -8" radius="0.1" color="#000000"></a-sphere>
       <!-- Legs -->
-      <a-box position="0.75 0.5 -4" width="0.3" height="1" depth="0.3" color="#DAA520"></a-box>
-      <a-box position="-0.75 0.5 -4" width="0.3" height="1" depth="0.3" color="#DAA520"></a-box>
-      <a-box position="0.75 0.5 -6" width="0.3" height="1" depth="0.3" color="#DAA520"></a-box>
-      <a-box position="-0.75 0.5 -6" width="0.3" height="1" depth="0.3" color="#DAA520"></a-box>
+      <a-box position="0.75 1 -4" width="0.3" height="1.5" depth="0.3" color="#DAA520"></a-box>
+      <a-box position="-0.75 1 -4" width="0.3" height="1.5" depth="0.3" color="#DAA520"></a-box>
+      <a-box position="0.75 1 -6" width="0.3" height="1.5" depth="0.3" color="#DAA520"></a-box>
+      <a-box position="-0.75 1 -6" width="0.3" height="1.5" depth="0.3" color="#DAA520"></a-box>
       <!-- Tail -->
-      <a-cylinder position="0 1 -2.2" rotation="0 0 0" radius="0.1" height="1.5" color="#DAA520"></a-cylinder>
-      <a-sphere position="0 0.25 -2.2" radius="0.2" color="#A0522D"></a-sphere>
+      <a-cylinder position="0 1.75 -3" rotation="90 0 0" radius="0.1" height="2" color="#DAA520"></a-cylinder>
+      <a-sphere position="0 1.75 -3.5" radius="0.2" color="#A0522D"></a-sphere>
     </a-entity>
 
     <!-- Flora and Environmental Details -->
@@ -64,7 +72,7 @@
     <a-box position="4 0.35 -10" width="1" height="0.7" depth="0.5" color="#A9A9A9"></a-box>
 
     <!-- Small Waterhole -->
-    <a-circle position="0 0 -12" rotation="-90 0 0" radius="2" color="#1E90FF"></a-circle>
+    <a-circle position="0 -0.01 -12" rotation="-90 0 0" radius="2" color="#1E90FF"></a-circle>
 
     <!-- Additional Environment Details -->
     <a-box position="2 0.25 -12" width="1" height="0.5" depth="1" color="#A9A9A9"></a-box>
