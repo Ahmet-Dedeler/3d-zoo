@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Panda Habitat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- Lighting -->
+    <a-light type="ambient" color="#ffffff" intensity="0.5"></a-light>
+    <a-light type="directional" color="#ffffff" intensity="0.6" position="5 10 5"></a-light>
+    <a-light type="point" intensity="0.8" distance="30" position="0 10 0" color="#ffd891"></a-light>
+
+    <!-- Ground with Grass Texture -->
+    <a-plane src="#grassTexture" rotation="-90 0 0" width="50" height="50" repeat="10 10"></a-plane>
+
+    <!-- Background -->
+    <a-sky color="#8CD1E3"></a-sky>
+
+    <!-- Sign -->
+    <a-box position="-2 3 2" width="4" height="2" depth="0.2" color="#FFF8DC"></a-box>
+    <a-text value="Panda Habitat" align="center" color="#000" width="5" position="-2 3.5 2.2"></a-text>
+
+    <!-- Panda Model -->
+
+    <!-- Body -->
+    <a-sphere position="0 1 0" radius="0.6" color="#FFFFFF"></a-sphere>
+    <a-cylinder position="0 1.3 -0.8" radius="0.55" height="0.7" rotation="90 0 0" color="#000000"></a-cylinder>
+
+    <!-- Head -->
+    <a-sphere position="0 2 0.65" radius="0.4" color="#FFFFFF"></a-sphere>
+    <a-sphere position="0 2 0.65" radius="0.4" color="#fff"></a-sphere>
+
+    <!-- Eyes -->
+    <a-sphere position="0.15 2 -0.75" radius="0.05" color="#000000"></a-sphere>
+    <a-sphere position="-0.15 2 -0.75" radius="0.05" color="#000000"></a-sphere>
+
+    <!-- Ears -->
+    <a-sphere position="0.3 2.4 -0.55" radius="0.1" color="#000000"></a-sphere>
+    <a-sphere position="-0.3 2.4 -0.55" radius="0.1" color="#000000"></a-sphere>
+
+    <!-- Legs -->
+    <a-cylinder position="0.4 0.3 0.3" radius="0.12" height="0.8" color="#000000"></a-cylinder>
+    <a-cylinder position="-0.4 0.3 0.3" radius="0.12" height="0.8" color="#000000"></a-cylinder>
+    <a-cylinder position="0.4 0.3 -0.5" radius="0.12" height="0.8" color="#000000"></a-cylinder>
+    <a-cylinder position="-0.4 0.3 -0.5" radius="0.12" height="0.8" color="#000000"></a-cylinder>
+
+    <!-- Bamboo Forest -->
+
+    <!-- Bamboo -->
+    <a-cylinder position="4 1 4" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+    <a-cylinder position="5 1 5" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+    <a-cylinder position="4 1 5" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+    <a-cylinder position="3.5 1 2" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+    <a-cylinder position="5.5 1 3" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+    <a-cylinder position="5 1 4.5" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+
+    <a-cylinder position="4 1 -4" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+    <a-cylinder position="5 1 -5" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+    <a-cylinder position="4 1 -5" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+    <a-cylinder position="-3.5 1 2" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+    <a-cylinder position="-5.5 1 3" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+    <a-cylinder position="-5 1 -4.5" radius="0.05" height="4" color="#32CD32"></a-cylinder>
+
+    <!-- Rock Formation -->
+    <a-sphere position="-3 0.5 -3" radius="0.5" color="#808080"></a-sphere>
+    <a-box position="-2.8 0.6 -3.2" width="0.3" height="0.3" depth="0.3" color="#708090"></a-box>
+    <a-sphere position="-3.5 0.4 -2.8" radius="0.4" color="#909090"></a-sphere>
+
+    <!-- Small Lake -->
+    <a-circle position="0 -0.01 -8" radius="2" color="#1E90FF" rotation="-90 0 0"></a-circle>
+
+    <!-- Bridge -->
+    <a-box position="0 0.5 -8" width="4" height="0.25" depth="0.5" color="#A0522D"></a-box>
+    <a-box position="1.7 0.1 -8" width="0.1" height="0.5" depth="0.5" color="#8B4513"></a-box>
+    <a-box position="-1.7 0.1 -8" width="0.1" height="0.5" depth="0.5" color="#8B4513"></a-box>
+
+    <!-- Flowers -->
+    <a-entity>
+      <a-cylinder position="2 0 -6" radius="0.1" height="0.3" color="#8B4513"></a-cylinder>
+      <a-sphere position="2 0.3 -6" radius="0.2" color="#FF69B4"></a-sphere>
+      <a-cylinder position="2.5 0 -6.5" radius="0.1" height="0.3" color="#8B4513"></a-cylinder>
+      <a-sphere position="2.5 0.3 -6.5" radius="0.2" color="#FF69B4"></a-sphere>
+      <a-cylinder position="3 0 -7" radius="0.1" height="0.3" color="#8B4513"></a-cylinder>
+      <a-sphere position="3 0.3 -7" radius="0.2" color="#FF69B4"></a-sphere>
+    </a-entity>
+
+    <!-- Pebble Path -->
+    <a-entity>
+      <a-sphere position="-3 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-2.8 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-2.6 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-2.4 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-2.2 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-2 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-1.8 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-1.6 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-1.4 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-1.2 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-1 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+      <a-sphere position="-0.8 -0.01 -1" radius="0.1" color="#696969"></a-sphere>
+    </a-entity>
+
+    <!-- Environmental Details -->
+    <a-sphere position="4.5 0.25 -6.5" radius="0.4" color="#228B22"></a-sphere>
+    <a-box position="0 0.25 -4" width="0.4" height="0.4" depth="0.4" color="#A9A9A9"></a-box>
+    <a-box position="6 0.25 -12" width="0.3" height="0.3" depth="0.3" color="#A9A9A9"></a-box>
+    <a-box position="5 0.25 -14" width="0.25" height="0.25" depth="0.25" color="#A9A9A9"></a-box>
+    <a-box position="-5 0.25 -7" width="0.25" height="0.25" depth="0.25" color="#A9A9A9"></a-box>
+    <a-sphere position="5 0.25 -5" radius="0.25" color="#228B22"></a-sphere>
+    <a-sphere position="-5 0.25 -5" radius="0.25" color="#228B22"></a-sphere>
+    <a-sphere position="3 0.25 -8" radius="0.2" color="#228B22"></a-sphere>
+    <a-sphere position="-3 0.25 -8" radius="0.2" color="#228B22"></a-sphere>
+
+    <!-- Camera -->
+    <a-entity camera look-controls wasd-controls position="0 2 10"></a-entity>
+
+    <!-- Assets -->
+    <a-assets>
+      <img id="grassTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+    </a-assets>
+  </a-scene>
+</body>
+</html>

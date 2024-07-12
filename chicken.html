@@ -20,8 +20,8 @@
     <a-box position="-2 2 1" width="3" height="2" depth="0.1" color="#FFF8DC"></a-box>
     <a-text value="Chicken/Rooster" align="center" color="#000" width="6" position="-2 2.5 1.05"></a-text>
 
-    <!-- Chicken Model -->
-    <a-entity position="0 0 -5" rotation="0 45 0">
+    <!-- Chicken Model Template -->
+    <a-mixin id="chicken">
       <!-- Body -->
       <a-sphere position="0 1.2 0" radius="0.5" color="#FFD700"></a-sphere>
       <!-- Head -->
@@ -37,10 +37,10 @@
       <!-- Legs -->
       <a-cylinder position="0.2 0.3 0" radius="0.04" height="0.6" color="#FFA500"></a-cylinder>
       <a-cylinder position="-0.2 0.3 0" radius="0.04" height="0.6" color="#FFA500"></a-cylinder>
-    </a-entity>
+    </a-mixin>
 
-    <!-- Rooster Model -->
-    <a-entity position="3 0 -7" rotation="0 45 0">
+    <!-- Rooster Model Template -->
+    <a-mixin id="rooster">
       <!-- Body -->
       <a-sphere position="0 1.2 0" radius="0.5" color="#FF4500"></a-sphere>
       <!-- Head -->
@@ -56,7 +56,19 @@
       <!-- Legs -->
       <a-cylinder position="0.2 0.3 0" radius="0.04" height="0.6" color="#FFA500"></a-cylinder>
       <a-cylinder position="-0.2 0.3 0" radius="0.04" height="0.6" color="#FFA500"></a-cylinder>
-    </a-entity>
+    </a-mixin>
+
+    <!-- Chickens -->
+    <a-entity mixin="chicken" position="0 0 -5" rotation="0 45 0"></a-entity>
+    <a-entity mixin="chicken" position="1 0 -6" rotation="0 30 0"></a-entity>
+    <a-entity mixin="chicken" position="-1 0 -4" rotation="0 60 0"></a-entity>
+    <a-entity mixin="chicken" position="2 0 -7" rotation="0 15 0"></a-entity>
+
+    <!-- Roosters -->
+    <a-entity mixin="rooster" position="3 0 -7" rotation="0 45 0"></a-entity>
+    <a-entity mixin="rooster" position="4 0 -8.5" rotation="0 -30 0"></a-entity>
+    <a-entity mixin="rooster" position="-2 0 -6.5" rotation="0 90 0"></a-entity>
+    <a-entity mixin="rooster" position="5 0 -10" rotation="0 -15 0"></a-entity>
 
     <!-- Chicken Coop -->
     <a-box position="0 1 -15" width="4" height="2" depth="4" color="#8B4513"></a-box>
