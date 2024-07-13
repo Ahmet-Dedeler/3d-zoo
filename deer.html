@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Wolf Habitat</title>
+  <title>Deer Habitat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
@@ -21,24 +21,27 @@
 
     <!-- Sign -->
     <a-box position="-2 3 2" width="4" height="2" depth="0.2" color="#FFF8DC"></a-box>
-    <a-text value="Wolf Habitat" align="center" color="#000" width="5" position="-2 3.5 2.2"></a-text>
+    <a-text value="Deer Habitat" align="center" color="#000" width="5" position="-2 3.5 2.2"></a-text>
 
-    <!-- Wolf Model -->
+    <!-- Deer Model -->
     <a-entity position="0 0 -5" scale="1.2 1.2 1.2" rotation="0 30 0">
       <!-- Body -->
-      <a-box position="0 0.5 0" width="1" height="0.5" depth="2.5" color="#696969"></a-box>
+      <a-box position="0 0.5 0" width="1" height="0.5" depth="2.5" color="#8B4513"></a-box>
       <!-- Head -->
-      <a-box position="0 1 1.5" width="0.8" height="0.5" depth="0.8" color="#696969"></a-box>
+      <a-box position="0 1 1.5" width="0.6" height="0.6" depth="0.8" color="#8B4513"></a-box>
       <!-- Ears -->
-      <a-cone position="0.3 1.5 1.7" radius-bottom="0.1" height="0.3" color="#696969"></a-cone>
-      <a-cone position="-0.3 1.5 1.7" radius-bottom="0.1" height="0.3" color="#696969"></a-cone>
-      <!-- Tail -->
-      <a-cone position="0 0.5 -1.7" rotation="180 0 0" radius-bottom="0.2" height="0.5" color="#696969"></a-cone>
+      <a-cone position="0.25 1.5 1.7" radius-bottom="0.1" height="0.3" color="#8B4513"></a-cone>
+      <a-cone position="-0.25 1.5 1.7" radius-bottom="0.1" height="0.3" color="#8B4513"></a-cone>
+      <!-- Antlers -->
+      <a-torus position="0.25 2 1.7" radius="0.1" tube="0.02" arc="180" rotation="90 0 0" color="#A0522D"></a-torus>
+      <a-torus position="-0.25 2 1.7" radius="0.1" tube="0.02" arc="180" rotation="90 0 0" color="#A0522D"></a-torus>
       <!-- Legs -->
-      <a-box position="0.4 -0.25 0.6" width="0.2" height="1" depth="0.2" color="#696969"></a-box>
-      <a-box position="-0.4 -0.25 0.6" width="0.2" height="1" depth="0.2" color="#696969"></a-box>
-      <a-box position="0.4 -0.25 -0.6" width="0.2" height="1" depth="0.2" color="#696969"></a-box>
-      <a-box position="-0.4 -0.25 -0.6" width="0.2" height="1" depth="0.2" color="#696969"></a-box>
+      <a-box position="0.4 0 -0.5" width="0.2" height="1.2" depth="0.2" color="#8B4513"></a-box>
+      <a-box position="-0.4 0 -0.5" width="0.2" height="1.2" depth="0.2" color="#8B4513"></a-box>
+      <a-box position="0.4 0 0.7" width="0.2" height="1.2" depth="0.2" color="#8B4513"></a-box>
+      <a-box position="-0.4 0 0.7" width="0.2" height="1.2" depth="0.2" color="#8B4513"></a-box>
+      <!-- Tail -->
+      <a-cone position="0 0.5 -1.4" rotation="180 0 0" radius-bottom="0.2" height="0.4" color="#8B4513"></a-cone>
     </a-entity>
 
     <!-- Trees -->
