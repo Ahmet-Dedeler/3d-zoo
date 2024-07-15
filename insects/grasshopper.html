@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grasshopper Habitat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- Lighting -->
+    <a-light type="ambient" color="#EEE"></a-light>
+    <a-light type="directional" position="-5 10 10" intensity="0.8" color="#FFFFFF"></a-light>
+    <a-light type="point" position="2 4 -1" intensity="0.6" color="#FFD700"></a-light>
+
+    <!-- Ground (Natural Floor) -->
+    <a-plane src="#groundTexture" rotation="-90 0 0" width="100" height="100" repeat="10 10" color="#556B2F"></a-plane>
+
+    <!-- Background -->
+    <a-sky color="#87CEEB"></a-sky>
+
+    <!-- Sign -->
+    <a-box position="0 3 2" width="5" height="2" depth="0.2" color="#FFF8DC"></a-box>
+    <a-text value="Grasshopper Habitat" align="center" color="#000" width="6" position="0 3.5 2.2"></a-text>
+
+    <!-- Grasshopper Model -->
+    <a-entity position="0 1 -5" scale="0.5 0.5 0.5">
+      <!-- Head -->
+      <a-sphere position="0.4 0 0" radius="0.1" color="#7CFC00"></a-sphere>
+
+      <!-- Antennae -->
+      <a-cylinder position="0.5 0.1 0.05" radius="0.005" height="0.3" color="black" rotation="45 0 0"></a-cylinder>
+      <a-cylinder position="0.3 0.1 0.05" radius="0.005" height="0.3" color="black" rotation="135 0 0"></a-cylinder>
+
+      <!-- Body Segments -->
+      <a-sphere position="0 0 0" radius="0.1" color="#7CFC00"></a-sphere>
+      <a-sphere position="-0.2 0 0" radius="0.15" color="#7CFC00"></a-sphere>
+      <a-box position="-0.4 0 0" width="0.3" height="0.2" depth="0.1" color="#7CFC00"></a-box>
+
+      <!-- Wings -->
+      <a-box position="-0.4 0.1 0" width="0.3" height="0.02" depth="0.2" color="#6B8E23" rotation="15 0 0"></a-box>
+      <a-box position="-0.4 0.1 0" width="0.3" height="0.02" depth="0.2" color="#6B8E23" rotation="-15 0 0"></a-box>
+
+      <!-- Legs -->
+      <a-entity>
+        <!-- Fore legs -->
+        <a-box position="0.2 -0.1 0.1" rotation="0 0 45" width="0.02" height="0.02" depth="0.2" color="#7CFC00"></a-box>
+        <a-box position="0.2 -0.1 -0.1" rotation="0 0 45" width="0.02" height="0.02" depth="0.2" color="#7CFC00"></a-box>
+
+        <!-- Middle legs -->
+        <a-box position="0 -0.1 0.1" rotation="0 0 45" width="0.02" height="0.02" depth="0.2" color="#7CFC00"></a-box>
+        <a-box position="0 -0.1 -0.1" rotation="0 0 45" width="0.02" height="0.02" depth="0.2" color="#7CFC00"></a-box>
+
+        <!-- Hind legs (jumping legs) -->
+        <a-box position="-0.2 -0.1 0.15" rotation="0 0 45" width="0.02" height="0.02" depth="0.4" color="#7CFC00"></a-box>
+        <a-box position="-0.2 -0.1 -0.15" rotation="0 0 45" width="0.02" height="0.02" depth="0.4" color="#7CFC00"></a-box>
+      </a-entity>
+    </a-entity>
+
+    <!-- Natural Elements -->
+    <a-entity>
+      <!-- Rocks and Pebbles -->
+      <a-sphere position="1 -0.1 -3" radius="0.1" color="#808080"></a-sphere>
+      <a-sphere position="1.2 -0.1 -3.2" radius="0.1" color="#808080"></a-sphere>
+      <a-sphere position="0.8 -0.1 -3.2" radius="0.1" color="#808080"></a-sphere>
+      <a-sphere position="1 -0.1 -3.4" radius="0.1" color="#808080"></a-sphere>
+
+      <!-- Bushes -->
+      <a-sphere position="3 1 -5" radius="1" color="#228B22"></a-sphere>
+      <a-sphere position="5 1 -4" radius="1" color="#228B22"></a-sphere>
+      <a-sphere position="4 1 -6" radius="1" color="#228B22"></a-sphere>
+
+      <!-- Logs -->
+      <a-cylinder position="-2 0 -5" radius="0.3" height="1" rotation="90 0 0" color="#8B4513"></a-cylinder>
+      <a-cylinder position="2 0 -6" radius="0.3" height="1" rotation="90 0 0" color="#8B4513"></a-cylinder>
+
+      <!-- Grass -->
+      <a-plane position="0 0 -5" rotation="-90 0 0" width="100" height="100" color="#7CFC00"></a-plane>
+      <a-box position="1 0 -6" width="0.1" height="0.3" depth="0.1" color="#228B22"></a-box>
+      <a-box position="1.5 0 -6.5" width="0.1" height="0.4" depth="0.1" color="#228B22"></a-box>
+      <a-box position="0.5 0 -5.5" width="0.1" height="0.2" depth="0.1" color="#228B22"></a-box>
+    </a-entity>
+
+    <!-- Camera -->
+    <a-entity camera position="0 2 10" look-controls wasd-controls></a-entity>
+
+    <!-- Assets -->
+    <a-assets>
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+    </a-assets>
+  </a-scene>
+</body>
+</html>
