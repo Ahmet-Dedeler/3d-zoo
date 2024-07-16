@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Penguin Habitat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- Lighting -->
+    <a-light type="ambient" color="#EEE"></a-light>
+    <a-light type="directional" position="-5 10 10" intensity="0.8" color="#FFFFFF"></a-light>
+    <a-light type="point" position="2 4 -1" intensity="0.6" color="#FFD700"></a-light>
+
+    <!-- Ground (Icy Floor) -->
+    <a-plane rotation="-90 0 0" width="100" height="100" color="#ADD8E6"></a-plane>
+
+    <!-- Background -->
+    <a-sky color="#87CEEB"></a-sky>
+
+    <!-- Sign -->
+    <a-box position="0 3 2" width="5" height="2" depth="0.2" color="#FFF8DC"></a-box>
+    <a-text value="Penguin Habitat" align="center" color="#000" width="6" position="0 3.5 2.2"></a-text>
+
+    <!-- Penguin Model -->
+    <a-entity position="0 1 -5" scale="1 1 1">
+      <!-- Body -->
+      <a-sphere position="0 0 0" radius="0.2" color="#000000" segments-height="18"></a-sphere>
+
+      <!-- White Belly -->
+      <a-sphere position="0 0 0.05" radius="0.18" color="#FFFFFF" segments-height="18" theta-length="180"></a-sphere>
+
+      <!-- Head -->
+      <a-sphere position="0.15 0.25 0" radius="0.1" color="#000000"></a-sphere>
+
+      <!-- Eyes -->
+      <a-sphere position="0.2 0.3 0.05" radius="0.02" color="#000000"></a-sphere>
+      <a-sphere position="0.2 0.3 -0.05" radius="0.02" color="#000000"></a-sphere>
+
+      <!-- Beak -->
+      <a-cone position="0.25 0.25 0" radius-bottom="0.02" radius-top="0" height="0.1" color="#FF4500"></a-cone>
+
+      <!-- Flippers -->
+      <a-box position="0 -0.05 0.25" width="0.5" height="0.08" depth="0.02" color="#000000" rotation="0 0 10"></a-box>
+      <a-box position="0 -0.05 -0.25" width="0.5" height="0.08" depth="0.02" color="#000000" rotation="0 0 -10"></a-box>
+
+      <!-- Feet -->
+      <a-box position="-0.08 -0.15 0.1" width="0.1" height="0.02" depth="0.2" color="#FFA500"></a-box>
+      <a-box position="-0.08 -0.15 -0.1" width="0.1" height="0.02" depth="0.2" color="#FFA500"></a-box>
+
+      <!-- Tail -->
+      <a-box position="-0.25 -0.05 0" width="0.02" height="0.05" depth="0.1" color="#000000" rotation="0 -10 10"></a-box>
+    </a-entity>
+
+    <!-- Natural Elements for Icy Habitat -->
+    <a-entity>
+      <!-- Icebergs -->
+      <a-box position="2 0 -5" width="1" height="1" depth="1" color="#FFFFFF"></a-box>
+      <a-box position="-3 0 -6" width="1" height="1.5" depth="1" color="#FFFFFF"></a-box>
+
+      <!-- Snowy Ground -->
+      <a-plane position="0 0 -5" rotation="-90 0 0" width="100" height="100" color="#F0F8FF"></a-plane>
+
+      <!-- Water Puddle -->
+      <a-circle position="2 -0.01 -4" rotation="-90 0 0" radius="1" color="#4682B4"></a-circle>
+
+      <!-- Snow Mounds -->
+      <a-sphere position="1 1 -3" radius="1" color="#F0F8FF"></a-sphere>
+      <a-sphere position="3 1.5 -6" radius="1.5" color="#F0F8FF"></a-sphere>
+      <a-sphere position="-2 1 -5" radius="1" color="#F0F8FF"></a-sphere>
+    </a-entity>
+
+    <!-- Camera -->
+    <a-entity camera position="0 2 10" look-controls wasd-controls></a-entity>
+
+    <!-- Assets -->
+    <a-assets>
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+    </a-assets>
+  </a-scene>
+</body>
+</html>
