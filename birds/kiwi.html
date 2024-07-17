@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiwi Bird Habitat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- Lighting -->
+    <a-light type="ambient" color="#EEE"></a-light>
+    <a-light type="directional" position="-5 10 10" intensity="0.8" color="#FFFFFF"></a-light>
+    <a-light type="point" position="2 4 -1" intensity="0.6" color="#FFD700"></a-light>
+
+    <!-- Ground (Forest Floor) -->
+    <a-plane rotation="-90 0 0" width="100" height="100" color="#8B4513"></a-plane>
+
+    <!-- Sky -->
+    <a-sky color="#87CEEB"></a-sky>
+
+    <!-- Sign -->
+    <a-box position="0 3 2" width="5" height="2" depth="0.2" color="#FFF8DC"></a-box>
+    <a-text value="Kiwi Bird Habitat" align="center" color="#000" width="6" position="0 3.5 2.2"></a-text>
+
+    <!-- Kiwi Bird Model -->
+    <a-entity position="0 1 0" scale="0.5 0.5 0.5">
+      <!-- Body -->
+      <a-sphere position="0 0 0" radius="0.3" color="#8B4513"></a-sphere>
+
+      <!-- Head -->
+      <a-sphere position="0 0.4 0.1" radius="0.15" color="#8B4513"></a-sphere>
+
+      <!-- Eyes -->
+      <a-sphere position="0.05 0.45 0.25" radius="0.03" color="#000000"></a-sphere>
+      <a-sphere position="-0.05 0.45 0.25" radius="0.03" color="#000000"></a-sphere>
+
+      <!-- Beak -->
+      <a-cylinder position="0 0.42 0.45" radius="0.02" height="0.4" color="#FFD700" rotation="90 0 0"></a-cylinder>
+
+      <!-- Legs -->
+      <a-cylinder position="0.1 -0.3 0" radius="0.03" height="0.5" color="#A0522D"></a-cylinder>
+      <a-cylinder position="-0.1 -0.3 0" radius="0.03" height="0.5" color="#A0522D"></a-cylinder>
+
+      <!-- Feet -->
+      <a-box position="0.1 -0.55 0" width="0.1" height="0.05" depth="0.2" color="#A0522D"></a-box>
+      <a-box position="-0.1 -0.55 0" width="0.1" height="0.05" depth="0.2" color="#A0522D"></a-box>
+    </a-entity>
+
+    <!-- Forest Elements -->
+    <a-entity>
+      <!-- Trees -->
+      <a-cylinder position="2 0 -6" radius="0.2" height="3" color="#8B4513"></a-cylinder>
+      <a-sphere position="2 1.5 -6" radius="0.8" color="#006400"></a-sphere>
+      <a-cylinder position="-3 0 -7" radius="0.3" height="4" color="#8B4513"></a-cylinder>
+      <a-sphere position="-3 2 -7" radius="1" color="#006400"></a-sphere>
+
+      <!-- Bushes -->
+      <a-box position="1 0 -7" width="0.5" height="1" depth="0.5" color="#228B22"></a-box>
+      <a-box position="1.2 0 -7.2" width="0.5" height="0.8" depth="0.5" color="#228B22"></a-box>
+
+      <!-- Rocks -->
+      <a-sphere position="-2 0 -4" radius="0.5" color="#808080"></a-sphere>
+      <a-sphere position="-1.5 0 -4.5" radius="0.4" color="#808080"></a-sphere>
+    </a-entity>
+
+    <!-- Camera -->
+    <a-entity camera position="0 2 5" look-controls wasd-controls></a-entity>
+
+    <!-- Assets -->
+    <a-assets>
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+    </a-assets>
+  </a-scene>
+</body>
+</html>
