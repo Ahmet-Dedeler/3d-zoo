@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hummingbird Habitat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- Lighting -->
+    <a-light type="ambient" color="#EEE"></a-light>
+    <a-light type="directional" position="-5 10 10" intensity="0.8" color="#FFFFFF"></a-light>
+    <a-light type="point" position="2 4 -1" intensity="0.6" color="#FFD700"></a-light>
+
+    <!-- Ground (Flower Meadow) -->
+    <a-plane rotation="-90 0 0" width="100" height="100" color="#7CFC00"></a-plane>
+
+    <!-- Sky -->
+    <a-sky color="#87CEEB"></a-sky>
+
+    <!-- Sign -->
+    <a-box position="0 3 2" width="5" height="2" depth="0.2" color="#FFF8DC"></a-box>
+    <a-text value="Hummingbird Habitat" align="center" color="#000" width="6" position="0 3.5 2.2"></a-text>
+
+    <!-- Hummingbird Model -->
+    <a-entity position="0 1 0" scale="0.25 0.25 0.25">
+      <!-- Body -->
+      <a-sphere position="0 0 0" radius="0.3" color="#228B22"></a-sphere>
+
+      <!-- Head -->
+      <a-sphere position="0 0.4 0.1" radius="0.15" color="#32CD32"></a-sphere>
+
+      <!-- Eyes -->
+      <a-sphere position="0.05 0.45 0.2" radius="0.02" color="#000000"></a-sphere>
+      <a-sphere position="-0.05 0.45 0.2" radius="0.02" color="#000000"></a-sphere>
+
+      <!-- Beak -->
+      <a-cylinder position="0 0.42 0.4" radius="0.02" height="0.6" color="#000000" rotation="90 0 0"></a-cylinder>
+
+      <!-- Wings -->
+      <a-plane position="0.3 0.4 0" width="1" height="0.2" color="#32CD32" rotation="0 0 30"></a-plane>
+      <a-plane position="-0.3 0.4 0" width="1" height="0.2" color="#32CD32" rotation="0 0 -30"></a-plane>
+
+      <!-- Tail -->
+      <a-box position="0 -0.3 -0.3" width="0.1" height="0.1" depth="0.6" color="#006400"></a-box>
+
+      <!-- Legs -->
+      <a-cylinder position="0.1 -0.4 0" radius="0.02" height="0.1" color="#8B4513"></a-cylinder>
+      <a-cylinder position="-0.1 -0.4 0" radius="0.02" height="0.1" color="#8B4513"></a-cylinder>
+    </a-entity>
+
+    <!-- Flower Elements -->
+    <a-entity>
+      <!-- Flowers -->
+      <a-cylinder position="1 0 -3" radius="0.1" height="0.5" color="#8B4513"></a-cylinder>
+      <a-sphere position="1 0.25 -3" radius="0.2" color="#FF6347"></a-sphere>
+
+      <a-cylinder position="-2 0 -4" radius="0.15" height="0.7" color="#8B4513"></a-cylinder>
+      <a-sphere position="-2 0.35 -4" radius="0.3" color="#FFD700"></a-sphere>
+
+      <a-cylinder position="3 0 -5" radius="0.07" height="0.3" color="#8B4513"></a-cylinder>
+      <a-sphere position="3 0.15 -5" radius="0.1" color="#FF69B4"></a-sphere>
+    </a-entity>
+
+    <!-- Tree Elements -->
+    <a-entity>
+      <!-- Trees -->
+      <a-cylinder position="4 0 -7" radius="0.2" height="3" color="#8B4513"></a-cylinder>
+      <a-sphere position="4 1.5 -7" radius="0.8" color="#006400"></a-sphere>
+
+      <a-cylinder position="-4 0 -8" radius="0.25" height="3.5" color="#8B4513"></a-cylinder>
+      <a-sphere position="-4 1.75 -8" radius="0.9" color="#006400"></a-sphere>
+    </a-entity>
+
+    <!-- Camera -->
+    <a-entity camera position="0 2 5" look-controls wasd-controls></a-entity>
+
+    <!-- Assets -->
+    <a-assets>
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+    </a-assets>
+  </a-scene>
+</body>
+</html>
