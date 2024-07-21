@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blue Ring Angelfish Habitat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- Lighting -->
+    <a-light type="ambient" color="#EEE"></a-light>
+    <a-light type="directional" position="-5 10 10" intensity="0.8" color="#FFFFFF"></a-light>
+
+    <!-- Ground (Coral Reef Bottom) -->
+    <a-plane rotation="-90 0 0" width="100" height="100" color="#FF8C00"></a-plane>
+
+    <!-- Water Background -->
+    <a-sky color="#1E90FF"></a-sky>
+
+    <!-- Sign -->
+    <a-box position="0 3 2" width="5" height="2" depth="0.2" color="#FFF8DC"></a-box>
+    <a-text value="Blue Ring Angelfish Habitat" align="center" color="#000" width="6" position="0 3.5 2.2"></a-text>
+
+    <!-- Blue Ring Angelfish Model -->
+    <a-entity position="0 1 0" scale="0.4 0.4 0.4">
+      <!-- Body -->
+      <a-box position="0 0 0" width="0.8" height="0.5" depth="0.2" color="#0000FF"></a-box>
+      <a-box position="0 0 0" width="0.8" height="0.5" depth="0.1" color="#FFD700" opacity="0.5"></a-box>
+
+      <!-- Head and Tail -->
+      <a-sphere position="-0.4 0 0" radius="0.15" color="#0000FF"></a-sphere>
+      <a-box position="0.4 0 0" width="0.1" height="0.5" depth="0.05" color="#0000FF"></a-box>
+
+      <!-- Eyes -->
+      <a-sphere position="-0.5 0.1 0.1" radius="0.05" color="#000000"></a-sphere>
+      <a-sphere position="-0.5 0.1 -0.1" radius="0.05" color="#000000"></a-sphere>
+
+      <!-- Fins -->
+      <a-box position="0 -0.3 0.2" width="0.1" height="0.2" depth="0.05" color="#4682B4" rotation="0 0 45"></a-box>
+      <a-box position="0 -0.3 -0.2" width="0.1" height="0.2" depth="0.05" color="#4682B4" rotation="0 0 -45"></a-box>
+      <a-box position="0.4 0 0.1" width="0.2" height="0.05" depth="0.05" color="#4682B4" rotation="0 45 0"></a-box>
+      <a-box position="0.4 0 -0.1" width="0.2" height="0.05" depth="0.05" color="#4682B4" rotation="0 -45 0"></a-box>
+    </a-entity>
+
+    <!-- Coral Reef Elements -->
+    <a-entity>
+      <!-- Coral -->
+      <a-torus position="1 0 -2" radius="0.5" tube="0.1" color="#FF6347"></a-torus>
+      <a-torus position="-1.5 0 -1.5" radius="0.3" tube="0.08" color="#8A2BE2"></a-torus>
+
+      <!-- Rocks -->
+      <a-sphere position="2 0 -3" radius="0.3" color="#8B4513"></a-sphere>
+      <a-sphere position="-2 0 -2" radius="0.4" color="#8B4513"></a-sphere>
+
+      <!-- Plants -->
+      <a-cylinder position="1 0.5 -4" radius="0.1" height="1" color="#228B22"></a-cylinder>
+      <a-cylinder position="-1 0.5 -3" radius="0.1" height="1.2" color="#228B22"></a-cylinder>
+      <a-cylinder position="0 0.5 -2" radius="0.1" height="1" color="#228B22"></a-cylinder>
+    </a-entity>
+
+    <!-- Camera -->
+    <a-entity camera position="0 2 5" look-controls wasd-controls></a-entity>
+
+    <!-- Assets -->
+    <a-assets>
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+    </a-assets>
+  </a-scene>
+</body>
+</html>
