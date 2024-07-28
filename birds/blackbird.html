@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blackbird Habitat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- Lighting -->
+    <a-light type="ambient" color="#CCC"></a-light>
+    <a-light type="directional" position="-1 2 3" intensity="0.5"></a-light>
+
+    <!-- Ground (Park) -->
+    <a-plane rotation="-90 0 0" width="100" height="100" color="#228B22"></a-plane>
+
+    <!-- Sky -->
+    <a-sky color="#87CEEB"></a-sky>
+
+    <!-- Sign -->
+    <a-box position="0 3 2" width="5" height="2" depth="0.2" color="#FFF8DC"></a-box>
+    <a-text value="Blackbird Habitat" align="center" color="#000" width="6" position="0 3.5 2.2"></a-text>
+
+    <!-- Blackbird Model (Parent) -->
+    <a-entity position="0 1 0" scale="0.7 0.7 0.7">
+      <!-- Body -->
+      <a-cylinder position="0 1 0" radius="0.3" height="2" color="#000" rotation="0 0 90"></a-cylinder>
+      <!-- Head -->
+      <a-sphere position="1 0 0" radius="0.3" color="#000"></a-sphere>
+      <!-- Eyes -->
+      <a-sphere position="1.1 0.1 0.2" radius="0.05" color="#FFD700"></a-sphere>
+      <a-sphere position="1.1 0.1 -0.2" radius="0.05" color="#FFD700"></a-sphere>
+      <!-- Beak -->
+      <a-cone position="1.3 -0.05 0" radius-bottom="0.1" height="0.3" color="#FFD700" rotation="0 90 0"></a-cone>
+      <!-- Wings -->
+      <a-box position="0 0.3 0" width="0.2" height="0.5" depth="2" color="#000"></a-box>
+      <a-box position="0 -0.3 0" width="0.2" height="0.5" depth="2" color="#000"></a-box>
+    </a-entity>
+
+    <!-- Blackbird Model (Chick) -->
+    <a-entity position="0.5 0.5 1" scale="0.5 0.5 0.5">
+      <!-- Body -->
+      <a-cylinder position="0 0 0" radius="0.2" height="1" color="#4B4B4B" rotation="0 0 90"></a-cylinder>
+      <!-- Head -->
+      <a-sphere position="0.5 0 0" radius="0.15" color="#4B4B4B"></a-sphere>
+      <!-- Eyes -->
+      <a-sphere position="0.55 0.08 0.1" radius="0.03" color="#FFD700"></a-sphere>
+      <a-sphere position="0.55 0.08 -0.1" radius="0.03" color="#FFD700"></a-sphere>
+      <!-- Beak -->
+      <a-cone position="0.65 -0.02 0" radius-bottom="0.05" height="0.2" color="#FFD700" rotation="0 90 0"></a-cone>
+      <!-- Wings -->
+      <a-box position="0 0.1 0" width="0.1" height="0.25" depth="1" color="#4B4B4B"></a-box>
+      <a-box position="0 -0.1 0" width="0.1" height="0.25" depth="1" color="#4B4B4B"></a-box>
+    </a-entity>
+
+    <!-- Nest (In a Bush) -->
+    <a-entity position="1 0.5 -2">
+      <!-- Bush -->
+      <a-sphere position="0 0 0" radius="1" color="#228B22"></a-sphere>
+      <!-- Nest -->
+      <a-torus position="0 1 0" radius="0.5" tube="0.1" color="#8B4513"></a-torus>
+      <a-sphere position="0 1 -0.2" scale="0.6 0.3 0.5" color="#8B4513"></a-sphere>
+    </a-entity>
+
+    <!-- Park Elements -->
+    <a-entity>
+      <!-- Trees -->
+      <a-cylinder position="2 0.5 -4" radius="0.5" height="5" color="#8B4513"></a-cylinder>
+      <a-cylinder position="-2 0.5 -5" radius="0.5" height="5" color="#8B4513"></a-cylinder>
+      <!-- Bushes -->
+      <a-sphere position="1 0 -3" radius="0.5" color="#228B22"></a-sphere>
+      <a-sphere position="-2 0 -2" radius="0.4" color="#228B22"></a-sphere>
+    </a-entity>
+
+    <!-- Camera -->
+    <a-entity camera position="0 2 5" look-controls wasd-controls></a-entity>
+  </a-scene>
+</body>
+</html>
