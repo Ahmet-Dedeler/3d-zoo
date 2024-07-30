@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blue Tit Habitat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- Lighting -->
+    <a-light type="ambient" color="#CCC"></a-light>
+    <a-light type="directional" position="-1 2 3" intensity="0.7"></a-light>
+
+    <!-- Ground (Meadow) -->
+    <a-plane rotation="-90 0 0" width="100" height="100" color="#7CFC00"></a-plane>
+
+    <!-- Sky -->
+    <a-sky color="#87CEEB"></a-sky>
+
+    <!-- Sign -->
+    <a-box position="0 4 2" width="5" height="3" depth="0.2" color="#FFFFE0"></a-box>
+    <a-text value="Blue Tit Habitat" align="center" color="#000" width="5" position="0 4.8 2.2"></a-text>
+    <a-text value="This is a serene meadow, the home of Blue Tit birds." align="center" color="#000" width="5" position="0 4.3 2.2"></a-text>
+
+    <!-- Blue Tit Model (Parent) -->
+    <a-entity position="0 1 0" scale="0.5 0.5 0.5">
+      <!-- Body -->
+      <a-cylinder position="0 0 0" radius="0.3" height="1" color="#1E90FF" rotation="0 0 90"></a-cylinder>
+      <!-- Head -->
+      <a-sphere position="0.5 0 0" radius="0.3" color="#ADFF2F"></a-sphere>
+      <!-- Beak -->
+      <a-cone position="0.65 0 0" radius-bottom="0.1" height="0.3" color="#FFD700" rotation="0 90 0"></a-cone>
+      <!-- Wings -->
+      <a-box position="0 0.3 0" width="0.2" height="0.5" depth="2" color="#1E90FF"></a-box>
+      <a-box position="0 -0.3 0" width="0.2" height="0.5" depth="2" color="#1E90FF"></a-box>
+    </a-entity>
+
+    <!-- Blue Tit Model (Chick) -->
+    <a-entity position="0.5 0.5 1" scale="0.5 0.5 0.5">
+      <!-- Body -->
+      <a-cylinder position="0 0 0" radius="0.2" height="0.7" color="#87CEEB" rotation="0 0 90"></a-cylinder>
+      <!-- Head -->
+      <a-sphere position="0.35 0 0" radius="0.2" color="#ADFF2F"></a-sphere>
+      <!-- Beak -->
+      <a-cone position="0.45 0 0" radius-bottom="0.07" height="0.2" color="#FFD700" rotation="0 90 0"></a-cone>
+      <!-- Wings -->
+      <a-box position="0 0.2 0" width="0.1" height="0.25" depth="1" color="#87CEEB"></a-box>
+      <a-box position="0 -0.2 0" width="0.1" height="0.25" depth="1" color="#87CEEB"></a-box>
+    </a-entity>
+
+    <!-- Nest -->
+    <a-entity position="1 0.2 1">
+      <a-torus radius="0.5" tube="0.1" color="#8B4513"></a-torus>
+      <a-sphere position="0 0 -0.2" scale="0.6 0.3 0.4" color="#8B4513"></a-sphere>
+      <a-text value="Nest" align="center" color="#FFF" width="0.5" position="0 0.5 0"></a-text>
+    </a-entity>
+
+    <!-- Trees and Bushes -->
+    <a-entity>
+      <!-- Trees -->
+      <a-cylinder position="3 0.5 -5" radius="0.5" height="6" color="#8B4513"></a-cylinder>
+      <a-sphere position="3 3 -5" radius="2" color="#006400"></a-sphere>
+      <a-cylinder position="-3 0.5 -6" radius="0.5" height="5" color="#8B4513"></a-cylinder>
+      <a-sphere position="-3 2.5 -6" radius="1.5" color="#006400"></a-sphere>
+      <!-- Bushes -->
+      <a-sphere position="1 0 -3" radius="1" color="#556B2F"></a-sphere>
+      <a-sphere position="-1 0 -2" radius="0.7" color="#556B2F"></a-sphere>
+    </a-entity>
+
+    <!-- Butterflies -->
+    <a-entity>
+      <a-plane position="0.5 1 -1" rotation="0 0 45" width="0.2" height="0.1" color="#FFA500"></a-plane>
+      <a-plane position="-0.5 1 -1" rotation="0 0 -45" width="0.2" height="0.1" color="#FFA500"></a-plane>
+      <a-plane position="1.5 1.5 -3" rotation="0 0 45" width="0.3" height="0.2" color="#FFA500"></a-plane>
+      <a-plane position="-1.5 1.5 -3" rotation="0 0 -45" width="0.3" height="0.2" color="#FFA500"></a-plane>
+    </a-entity>
+
+    <!-- Camera -->
+    <a-entity camera position="0 2 5" look-controls wasd-controls></a-entity>
+  </a-scene>
+</body>
+</html>
