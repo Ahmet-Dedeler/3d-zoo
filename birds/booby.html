@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booby Habitat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- Lighting -->
+    <a-light type="ambient" color="#FFF"></a-light>
+    <a-light type="directional" position="-1 2 3" intensity="0.8"></a-light>
+
+    <!-- Ground (Rocky Island) -->
+    <a-plane rotation="-90 0 0" width="100" height="100" color="#808080"></a-plane>
+
+    <!-- Sky -->
+    <a-sky color="#1E90FF"></a-sky>
+
+    <!-- Sign -->
+    <a-box position="0 4 2" width="5" height="3" depth="0.2" color="#FFFACD"></a-box>
+    <a-text value="Booby Habitat" align="center" color="#000" width="5" position="0 4.8 2.2"></a-text>
+    <a-text value="Welcome to the rocky island home of the Booby birds." align="center" color="#000" width="5" position="0 4.3 2.2"></a-text>
+
+    <!-- Booby Model (Parent) -->
+    <a-entity position="0 1 0" scale="0.8 0.8 0.8">
+      <!-- Body -->
+      <a-cylinder position="0 0 0" radius="0.4" height="1.5" color="#FFF" rotation="0 0 90"></a-cylinder>
+      <!-- Head -->
+      <a-sphere position="0.75 0 0" radius="0.25" color="#FFF"></a-sphere>
+      <!-- Beak -->
+      <a-cone position="1 0 0" radius-bottom="0.1" height="0.3" color="#87CEEB" rotation="0 90 0"></a-cone>
+      <!-- Wings -->
+      <a-box position="0 0.3 0" width="0.2" height="0.5" depth="1.5" color="#FFF"></a-box>
+      <a-box position="0 -0.3 0" width="0.2" height="0.5" depth="1.5" color="#FFF"></a-box>
+      <!-- Feet -->
+      <a-sphere position="0 -0.5 -0.5" radius="0.1" color="#87CEEB"></a-sphere>
+      <a-sphere position="0 -0.5 0.5" radius="0.1" color="#87CEEB"></a-sphere>
+    </a-entity>
+
+    <!-- Booby Model (Chick) -->
+    <a-entity position="1 0.5 1" scale="0.6 0.6 0.6">
+      <!-- Body -->
+      <a-cylinder position="0 0 0" radius="0.3" height="1" color="#FAFAD2" rotation="0 0 90"></a-cylinder>
+      <!-- Head -->
+      <a-sphere position="0.5 0 0" radius="0.2" color="#FAFAD2"></a-sphere>
+      <!-- Beak -->
+      <a-cone position="0.65 0 0" radius-bottom="0.1" height="0.25" color="#87CEEB" rotation="0 90 0"></a-cone>
+      <!-- Wings -->
+      <a-box position="0 0.2 0" width="0.15" height="0.3" depth="1" color="#FAFAD2"></a-box>
+      <a-box position="0 -0.2 0" width="0.15" height="0.3" depth="1" color="#FAFAD2"></a-box>
+      <!-- Feet -->
+      <a-sphere position="0 -0.35 -0.35" radius="0.08" color="#87CEEB"></a-sphere>
+      <a-sphere position="0 -0.35 0.35" radius="0.08" color="#87CEEB"></a-sphere>
+    </a-entity>
+
+    <!-- Nest -->
+    <a-entity position="1 0.1 1">
+      <a-torus radius="0.5" tube="0.1" color="#A0522D"></a-torus>
+      <a-sphere position="0 0 -0.2" scale="0.6 0.3 0.4" color="#A0522D"></a-sphere>
+      <a-text value="Nest" align="center" color="#FFF" width="0.5" position="0 0.5 0"></a-text>
+    </a-entity>
+
+    <!-- Rocks and Ocean -->
+    <a-entity>
+      <!-- Rocks -->
+      <a-cylinder position="3 0.5 -5" radius="1" height="2" color="#696969"></a-cylinder>
+      <a-cylinder position="-3 0.5 -6" radius="1.5" height="3" color="#A9A9A9"></a-cylinder>
+      <!-- Ocean -->
+      <a-plane position="0 -0.05 -10" rotation="-90 0 0" width="50" height="50" color="#1E90FF"></a-plane>
+    </a-entity>
+
+    <!-- Waves -->
+    <a-entity>
+      <a-box position="2 1 -8" width="10" height="0.2" depth="4" color="#87CEEB" rotation="0 0 20"></a-box>
+      <a-box position="-2 1 -9" width="8" height="0.2" depth="3" color="#87CEEB" rotation="0 0 -20"></a-box>
+    </a-entity>
+
+    <!-- Camera -->
+    <a-entity camera position="0 2 5" look-controls wasd-controls></a-entity>
+  </a-scene>
+</body>
+</html>
